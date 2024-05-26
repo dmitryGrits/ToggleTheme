@@ -1,4 +1,5 @@
 import React from 'react';
+import '../App.css';
 import { useSelector, useDispatch } from 'react-redux';
 
 export const initialState = {theme: "light"}
@@ -13,7 +14,7 @@ export default function ToggleTheme() {
 
 
     return (
-        <div>
+        <div className={theme === "light" ? "light" : "dark"}>
             <h1>Theme: {theme}</h1>
             <button onClick={toggleTheme}>Switch theme</button>
         </div>
